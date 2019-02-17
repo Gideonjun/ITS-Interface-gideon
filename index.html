@@ -7,37 +7,38 @@
 		<link type="text/css" href="style.css" rel="stylesheet" />
 		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 	    <script type="text/javascript">
-	      google.charts.load("current", {packages:["corechart"]});
-	      google.charts.setOnLoadCallback(drawChart);
-	      function drawChart() {
-	        var data = google.visualization.arrayToDataTable([
-	          ['Task', 'Hours per Day'],
-	          ['Work',     11],
-	          ['Eat',      2],
-	          ['Commute',  2],
-	          ['Watch TV', 2],
-	          ['Sleep',    7]
-	        ]);
+	            google.charts.load('current', {'packages':['corechart']});
+			    google.charts.setOnLoadCallback(drawChart);
 
-	        var options = {
-	          title: 'My Daily Activities',
-	          pieHole: 0.4,
-	        };
+			    function drawChart() {
 
-	        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
-	        chart.draw(data, options);
-	      }
+			      var data = new google.visualization.DataTable();
+			      data.addColumn('string', 'Pizza');
+			      data.addColumn('number', 'Populartiy');
+			      data.addRows([
+			        ['Voedsel', 65],
+			        ['Water', 35],
+			      ]);
+
+			      var options = {
+			        
+			        sliceVisibilityThreshold: .2
+			      };
+
+			      var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+			      chart.draw(data, options);
+			    };
 	    </script>
 	</head>
 	<body>
 		<h1>ITS Interface</h1>
-		<div class="timeline-container">
-			<div class="timeline-item foto">
+		<div class="dashboard-container">
+			<div class="dashboard-item foto">
 				<h3>Brandstof</h3>
-				<div id="donutchart"></div>
+				
 			</div>
 
-			<div class="timeline-item bericht">
+			<div class="dashboard-item bericht">
 				<h3>Voertuig omgeving</h3>
 				
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -47,18 +48,12 @@
 				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 			</div>
-			<div class="timeline-item advertentie">
+			<div class="dashboard-item advertentie">
 				<h3>Voorraden</h3>
-				
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<div id="chart_div"></div>
 			</div>
 
-			<div class="timeline-item ebay">
+			<div class="dashboard-item ebay">
 				<h3>Tools</h3>
 				
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -69,7 +64,7 @@
 				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 			</div>
 
-			<div class="timeline-item boek">
+			<div class="dashboard-item boek">
 				<h3>Overig</h3>
 				
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -80,19 +75,19 @@
 				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 			</div>
 
-			<!-- <div class="timeline-item verkoop">
+			<!-- <div class="dashboard-item verkoop">
 				<h3>De eerste online verkoop</h3>
 				<h4>1995</h4>
 				<p>Wat mogelijk telde als de eerste legitieme online transactie ging naar Dan Kohn in Augustus 1994. Hij creëerde een website genaamd NetMarket. Op 11 Augustus had Kohn een CD van Sting’s “Ten Summoner’s Tales” verkocht aan een vriend van hem in Philadelphia. De vriend van Kohn had $12.48 moeten betalen inclusief shipping.</p>
 			</div>
 
-			<div class="timeline-item client">
+			<div class="dashboard-item client">
 				<h3>De eerste bit torrent client</h3>
 				<h4>2002</h4>
 				<p>Ooit de eerste BitTorrent client — geschreven door de uitvinder Bram Cohen. Het was in korte tijd al een zeer effectieve site geworden. Dit kwam mede omdat het meestal gratis te gebruiken was en super efficient was om programma’s illegaal te downloaden.</p>
 			</div>
 
-			<div class="timeline-item gesprek">
+			<div class="dashboard-item gesprek">
 				<h3>Het eerste Skype gesprek</h3>
 				<h4>2003</h4>
 				<p>De eerste zin ooit op Skype verteld was in Estland in April 2003. Het luidde: 'Tere, kas sa kuuled mind?' of "Hello, can you hear me?" in het Engels.</p>
