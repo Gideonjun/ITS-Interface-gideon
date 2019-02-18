@@ -101,79 +101,33 @@
 				<h3>Tools</h3>
 				<div id="tools"></div>
 				 <script>
-	            google.charts.load('current', {'packages':['corechart']});
-			    google.charts.setOnLoadCallback(drawChart);
+			      google.charts.load('current', {'packages':['corechart']});
+			      google.charts.setOnLoadCallback(drawChart);
 
-			    function drawChart() {
+			      function drawChart() {
+			        var data = google.visualization.arrayToDataTable([
+			          ['Zwaartekracht', 'Afstand'],
+			          [ 8, 10],
+			          [ 4, 20],
+			          [ 3, 30],
+			          [ 2, 40],
+			          [ 1, 50],
+			          [ 0, 60]
+			        ]);
 
-			      var data = new google.visualization.DataTable();
-			      data.addColumn('string', 'Pizza');
-			      data.addColumn('number', 'Populartiy');
-			      data.addRows([
-			        ['Zwaartekracht omzetten', 65],
-			        ['Mars naar Aarde', 35],
-			      ]);
+			        var options = {
+			          title: 'Mars naar aardse Afstand en Zwaartekracht',
+			          hAxis: {title: 'Zwaartekracht', minValue: 0, maxValue: 15},
+			          vAxis: {title: 'Afstand', minValue: 0, maxValue: 15},
+			          legend: 'none'
+			        };
 
-			      var options = {
-			        
-			        sliceVisibilityThreshold: .2
-			      };
+			        var chart = new google.visualization.ScatterChart(document.getElementById('tools'));
 
-			      var chart = new google.visualization.LineChart(document.getElementById('tools'));
-			      chart.draw(data, options);
-			    };
-	    		</script>
-				
+			        chart.draw(data, options);
+			      }
+			    </script>
 			</div>
-
-			<!-- <div class="dashboard-item overig">
-				<h3>Overig</h3>
-				<div id="overig"></div>
-				 <script>
-	            google.charts.load('current', {'packages':['corechart']});
-			    google.charts.setOnLoadCallback(drawChart);
-
-			    function drawChart() {
-
-			      var data = new google.visualization.DataTable();
-			      data.addColumn('string', 'Pizza');
-			      data.addColumn('number', 'Populartiy');
-			      data.addRows([
-			        ['Voedsel', 65],
-			        ['Water', 35],
-			      ]);
-
-			      var options = {
-			        
-			        sliceVisibilityThreshold: .2
-			      };
-
-			      var chart = new google.visualization.PieChart(document.getElementById('overig'));
-			      chart.draw(data, options);
-			    };
-	    		</script>
-			</div> -->
-
-			<!-- <div class="dashboard-item verkoop">
-				<h3>De eerste online verkoop</h3>
-				<h4>1995</h4>
-				<p>Wat mogelijk telde als de eerste legitieme online transactie ging naar Dan Kohn in Augustus 1994. Hij creëerde een website genaamd NetMarket. Op 11 Augustus had Kohn een CD van Sting’s “Ten Summoner’s Tales” verkocht aan een vriend van hem in Philadelphia. De vriend van Kohn had $12.48 moeten betalen inclusief shipping.</p>
-			</div>
-
-			<div class="dashboard-item client">
-				<h3>De eerste bit torrent client</h3>
-				<h4>2002</h4>
-				<p>Ooit de eerste BitTorrent client — geschreven door de uitvinder Bram Cohen. Het was in korte tijd al een zeer effectieve site geworden. Dit kwam mede omdat het meestal gratis te gebruiken was en super efficient was om programma’s illegaal te downloaden.</p>
-			</div>
-
-			<div class="dashboard-item gesprek">
-				<h3>Het eerste Skype gesprek</h3>
-				<h4>2003</h4>
-				<p>De eerste zin ooit op Skype verteld was in Estland in April 2003. Het luidde: 'Tere, kas sa kuuled mind?' of "Hello, can you hear me?" in het Engels.</p>
-			</div> -->
-
 		</div>
-
-		<script type="text/javascript" src="scripts/main.js"></script>
 	</body>
 </html>
