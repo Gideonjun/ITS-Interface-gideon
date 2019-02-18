@@ -8,13 +8,17 @@ body{
 	font-family: arial;
 }
 
+h3 {
+	color: #000000;
+}
+
 h1, h3, h4 {
 	text-align: center;
 }
 
 
 .dashboard-container {
-	background-color: #444444;
+	background-color: #1b1b1b;
 	flex-basis: 100%;
 	margin: 40px auto 0 auto;
 }
@@ -32,42 +36,22 @@ img {
 
 .brandstof, .brandstof1 {
 	order: 1;
-	background-color: #C0392B;
+	background-color: #FFFFFF;
 }
 
 .omgeving, .omgeving1 {
 	order: 2;
-	background-color: #5499C7;
+	background-color: #FFFFFF;
 }
 
 .voorraden, .voorraden1 {
 	order: 3;
-	background-color: #D4AC0D;
+	background-color: #FFFFFF;
 }
 
 .tools, .tools1 {
 	order: 4;
-	background-color: #9B59B6;
-}
-
-.overig, .overig1 {
-	order: 5;
-	background-color: #76D7C4;
-}
-
-.verkoop, .verkoop1 {
-	order: 6;
-	background-color: #DC7633;
-}
-
-.client, .client1 {
-	order: 7;
-	background-color: #34495E;
-}
-
-.gesprek, .gesprek1 {
-	order: 8;
-	background-color: #F5B7B1;
+	background-color: #FFFFFF;
 }
 
 .brandstoflink {
@@ -84,7 +68,7 @@ img {
 		height: 400px;
 	}
 
-	.brandstof1, .omgeving1, .tools1, .overig1, .voorraden1, .verkoop1, .client1, .gesprek1 {
+	.brandstof1, .omgeving1, .tools1, .overig1, .voorraden1 {
 		display: none;
 	}
 }
@@ -97,7 +81,7 @@ img {
 		width: 50%;
 		height: 400px;
 	}
-	.brandstof1, .omgeving1, .tools1, .overig1, .voorraden1, .verkoop1, .client1, .gesprek1 {
+	.brandstof1, .omgeving1, .tools1, .overig1, .voorraden1 {
 		display: none;
 	}
 }
@@ -110,7 +94,7 @@ img {
 		width: 33.33333%;
 		height: 385px;
 	}
-	.brandstof1, .omgeving1, .tools1, .overig1, .voorraden1, .verkoop1, .client1, .gesprek1 {
+	.brandstof1, .omgeving1, .tools1, .overig1, .voorraden1 {
 		display: none;
 	}
 }
@@ -120,7 +104,7 @@ img {
 /*Full desktop*/
 @media only screen and (min-width: 1050px) {
 	.dashboard-item {
-		width: 25%;
+		width: 24.5%;
 	}
 
 	.dashboard-container {
@@ -129,6 +113,7 @@ img {
 		display: flex;	
 		flex-wrap: wrap;
 		justify-content: space-between;
+
 	}	
 
 	.brandstoflink {
