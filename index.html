@@ -20,10 +20,8 @@
 			    function drawChart() {
 
 			      var data = new google.visualization.DataTable();
-			      data.addColumn('number', 'Brandstof');
+			      data.addColumn('string', 'Brandstof');
 			      data.addColumn('number', 'Snelheid');
-			      data.addColumn('number', 'Acceleratie');
-			      data.addColumn('number', 'G-force');
 			      data.addRows([
 			        ['Brandstof', 40],
 			        ['Snelheid', 15],
@@ -52,8 +50,7 @@
 			    function drawChart() {
 
 			      var data = new google.visualization.DataTable();
-			      data.addColumn('number', 'Zwaartekracht');
-			      data.addColumn('number', 'Afstand');
+			      data.addColumn('string', 'Zwaartekracht');
 			      data.addColumn('number', 'Atmosfeer');
 			      data.addRows([
 			        ['Zwaartekracht', 65],
@@ -82,7 +79,7 @@
 			    function drawChart() {
 
 			      var data = new google.visualization.DataTable();
-			      data.addColumn('number', 'Voedsel');
+			      data.addColumn('string', 'Voedsel');
 			      data.addColumn('number', 'Water');
 			      data.addRows([
 			        ['Voedsel', 65],
