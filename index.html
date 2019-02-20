@@ -35,7 +35,7 @@
 			      };
 
 			      var chart = new google.visualization.BarChart(document.getElementById('brandstof'));
-			      chart.draw(data, options);
+			      chart.draw(data, {colors: ['#FF6230', '#FF6230'],}, options);
 			    };
 	    		</script>
 			</div>
@@ -59,12 +59,12 @@
 			      ]);
 
 			      var options = {
-			        
+		
 			        sliceVisibilityThreshold: .3
 			      };
 
 			      var chart = new google.visualization.ColumnChart(document.getElementById('voertuig'));
-			      chart.draw(data, options);
+			      chart.draw(data, {colors: ['#FF6230', '#FF6230'],}, options);
 			    };
 	    		</script>
 			</div>
@@ -92,7 +92,7 @@
 			      };
 
 			      var chart = new google.visualization.PieChart(document.getElementById('voorraden'));
-			      chart.draw(data, options);
+			      chart.draw(data, {colors: ['#FF6230', '#3088FF'],}, options);
 			    };
 	    		</script>
 			</div>
