@@ -55,12 +55,12 @@
 			      ]);
 
 			      var options = {
-			        
-			        sliceVisibilityThreshold: .4
+			        legend: 'none',
+			        sliceVisibilityThreshold: .4,
 			      };
 
-			      var chart = new google.visualization.AreaChart(document.getElementById('brandstof'));
-			      chart.draw(data, {colors: ['#FF6230', '#FF6230'],}, options);
+			      var chart = new google.visualization.ColumnChart(document.getElementById('brandstof'));
+			      chart.draw(data, options);
 			    };
 	    		</script>
 			</div>
@@ -90,7 +90,7 @@
 				   </script> -->
 
 			<div class="dashboard-item omgeving">
-				<h3>Voertuig omgeving in %</h3>
+				<h3>Afstand over tijd in KM</h3>
 				<div id="voertuig"></div>
 				 <script>
 	            google.charts.load('current', {'packages':['corechart']});
@@ -102,24 +102,27 @@
 			      data.addColumn('string', 'Zwaartekracht');
 			      data.addColumn('number', 'Atmosfeer');
 			      data.addRows([
-			        ['Zwaartekracht', 65],
-			        ['Afstand', 15],
-			        ['Atmosfeer', 20]
+			        ['06:00', 0],
+			        ['10:00', 7000],
+			        ['14:00', 18000],
+			        ['18:00', 32000],
+			        ['22:00', 49500],
+			        ['02:00', 81642]
 			      ]);
 
 			      var options = {
-		
-			        sliceVisibilityThreshold: .3
+					legend: 'none',
+			        sliceVisibilityThreshold: .3,
 			      };
 
-			      var chart = new google.visualization.ColumnChart(document.getElementById('voertuig'));
-			      chart.draw(data, {colors: ['#FF6230', '#FF6230'],}, options);
+			      var chart = new google.visualization.AreaChart(document.getElementById('voertuig'));
+			      chart.draw(data, options);
 			    };
 	    		</script>
 			</div>
 
 			<div class="dashboard-item voorraden">
-				<h3>Voertuig omgeving in %</h3>
+				<h3>Voedsel voorraad in %</h3>
 				<!-- <h3>Voorraden in %</h3>
 				<canvas id="myChart3"></canvas>
    				<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
@@ -159,12 +162,14 @@
 			        ['Water', 35],
 			      ]);
 
-			      var options = {
-			        
-			        sliceVisibilityThreshold: .2
-			      };
-			      var chart = new google.visualization.ColumnChart(document.getElementById('voorraden'));
-			      chart.draw(data, {colors: ['#FF6230', '#3088FF'],}, options);
+			       var options = {
+			          legend: 'none',
+			          pieHole: 0.4,
+			        };
+
+			      var chart = new google.visualization.PieChart(document.getElementById('voorraden'));
+			      
+			      chart.draw(data, options);
 			    };
 	    		</script>
 
@@ -197,31 +202,28 @@
 				   </script>
 			    };
 	    		</script> -->
-				<h3>Tools</h3>
+				<h3>Bemanning</h3>
 				<div id="tools"></div>
 				 <script>
 			      google.charts.load('current', {'packages':['corechart']});
 			      google.charts.setOnLoadCallback(drawChart);
 
 			      function drawChart() {
-			        var data = google.visualization.arrayToDataTable([
-			          ['Zwaartekracht', 'Afstand'],
-			          [ 8, 10],
-			          [ 4, 20],
-			          [ 3, 30],
-			          [ 2, 40],
-			          [ 1, 50],
-			          [ 0, 60]
-			        ]);
+				      var data = new google.visualization.DataTable();
+				      data.addColumn('string', 'Voedsel');
+				      data.addColumn('number', 'Water');
+				      data.addRows([
+				        ['Mannen', 40],
+				        ['Vrouwen', 30],
+				        ['Vogels', 10],
+				        ['Overige Dieren', 20],
+				      ]);
 
 			        var options = {
-			          title: 'Mars naar aardse Afstand en Zwaartekracht',
-			          hAxis: {title: 'Zwaartekracht', minValue: 0, maxValue: 15},
-			          vAxis: {title: 'Afstand', minValue: 0, maxValue: 15},
-			          legend: 'none'
+			          legend: 'none',
 			        };
 
-			        var chart = new google.visualization.BarChart(document.getElementById('tools'));
+			        var chart = new google.visualization.PieChart(document.getElementById('tools'));
 
 			        chart.draw(data, options);
 			      }
