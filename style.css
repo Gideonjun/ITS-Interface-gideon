@@ -4,7 +4,7 @@
 
 body{
 	background-image: linear-gradient(to bottom, #0000ff 0%, #9966ff 100%);
-	background-size: auto;
+	background-size: fill;
 	background-position: center;
 	color: #FFFFFF;
 	font-family: arial;
@@ -21,7 +21,7 @@ h1, h3, h4 {
 
 .dashboard-container {
 	background-image: linear-gradient(to bottom, #0000ff 0%, #9966ff 100%);
-	background-size: auto;
+	background-size: fill;
 	background-position: center;
 	flex-basis: 100%;
 	margin: 40px auto 0 auto;
@@ -123,7 +123,8 @@ img {
 /*Full desktop*/
 @media only screen and (min-width: 1175px) {
 	.dashboard-item {
-		width: 24.5%;
+		width: 49.7%;
+		margin-bottom: 5px;
 	}
 
 	.dashboard-container {

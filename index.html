@@ -11,8 +11,7 @@
 		<h1>ITS Interface</h1>
 		<div class="dashboard-container">
 			<div class="dashboard-item brandstof">
-<<<<<<< HEAD
-				<h3>Voertuig info in %</h3>
+				<!-- <h3>Voertuig info in %</h3>
 				<canvas id="myChart1"></canvas>
    				<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 				   <script>
@@ -35,36 +34,9 @@
 				    // Configuration options go here
 				    options: {}
 				});
-				   </script>
-			</div>
+				   </script> -->
 
-			<div class="dashboard-item omgeving">
-				<h3>Afstand over tijd in KM</h3>
-				<canvas id="myChart2"></canvas>
-   				<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-				   <script>
-				   	var ctx = document.getElementById('myChart2').getContext('2d');
-					var chart = new Chart(ctx, {
-				    // The type of chart we want to create
-				    type: 'line',
-
-				    // The data for our dataset
-				    data: {
-				        labels: ['06:00', '10:00', '14:00', '18:00', '22:00', '02:00'],
-				        datasets: [{
-				            label: 'Omgeving van voertuig',
-				            backgroundColor: 'rgb(253, 115, 230)',
-				            borderColor: 'rgb(182, 83, 166)',
-				            data: [0, 7000, 18000, 32000, 49000, 62000, 81000]
-				        }]
-				    },
-
-				    // Configuration options go here
-				    options: {}
-				});
-				   </script>
-=======
-				<h3>Performance in %</h3>
+				   <h3>Performance in %</h3>
 				<div id="brandstof"></div>
 				 <script>
 	            google.charts.load('current', {'packages':['corechart']});
@@ -87,11 +59,35 @@
 			        sliceVisibilityThreshold: .4
 			      };
 
-			      var chart = new google.visualization.ColumnChart(document.getElementById('brandstof'));
+			      var chart = new google.visualization.AreaChart(document.getElementById('brandstof'));
 			      chart.draw(data, {colors: ['#FF6230', '#FF6230'],}, options);
 			    };
 	    		</script>
 			</div>
+				<!-- <h3>Afstand over tijd in KM</h3>
+				<canvas id="myChart2"></canvas>
+   				<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+				   <script>
+				   	var ctx = document.getElementById('myChart2').getContext('2d');
+					var chart = new Chart(ctx, {
+				    // The type of chart we want to create
+				    type: 'line',
+
+				    // The data for our dataset
+				    data: {
+				        labels: ['06:00', '10:00', '14:00', '18:00', '22:00', '02:00'],
+				        datasets: [{
+				            label: 'Omgeving van voertuig',
+				            backgroundColor: 'rgb(253, 115, 230)',
+				            borderColor: 'rgb(182, 83, 166)',
+				            data: [0, 7000, 18000, 32000, 49000, 62000, 81000]
+				        }]
+				    },
+
+				    // Configuration options go here
+				    options: {}
+				});
+				   </script> -->
 
 			<div class="dashboard-item omgeving">
 				<h3>Voertuig omgeving in %</h3>
@@ -120,13 +116,11 @@
 			      chart.draw(data, {colors: ['#FF6230', '#FF6230'],}, options);
 			    };
 	    		</script>
->>>>>>> parent of a362576... New chart
 			</div>
 
 			<div class="dashboard-item voorraden">
-				<h3>Voorraden in %</h3>
-<<<<<<< HEAD
-<<<<<<< HEAD
+				<h3>Voertuig omgeving in %</h3>
+				<!-- <h3>Voorraden in %</h3>
 				<canvas id="myChart3"></canvas>
    				<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 				   <script>
@@ -149,10 +143,7 @@
 				    // Configuration options go here
 				    options: {}
 				});
-				   </script>
-=======
-=======
->>>>>>> parent of a362576... New chart
+				   </script> -->
 				<div id="voorraden"></div>
 				 <script>
 	            google.charts.load('current', {'packages':['corechart']});
@@ -172,17 +163,15 @@
 			        
 			        sliceVisibilityThreshold: .2
 			      };
-
-<<<<<<< HEAD
 			      var chart = new google.visualization.ColumnChart(document.getElementById('voorraden'));
 			      chart.draw(data, {colors: ['#FF6230', '#3088FF'],}, options);
 			    };
 	    		</script>
->>>>>>> parent of f2dcf8a... chart first change
+
 			</div>
 
 			<div class="dashboard-item tools">
-				<h3>Bemanning in %</h3>
+				<!-- <h3>Bemanning in %</h3>
 				<canvas id="myChart4"></canvas>
    				<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 				   <script>
@@ -206,14 +195,8 @@
 				    options: {}
 				});
 				   </script>
-=======
-			      var chart = new google.visualization.PieChart(document.getElementById('voorraden'));
-			      chart.draw(data, {colors: ['#FF6230', '#3088FF'],}, options);
 			    };
-	    		</script>
-			</div>
-
-			<div class="dashboard-item tools">
+	    		</script> -->
 				<h3>Tools</h3>
 				<div id="tools"></div>
 				 <script>
@@ -243,7 +226,6 @@
 			        chart.draw(data, options);
 			      }
 			    </script>
->>>>>>> parent of a362576... New chart
 			</div>
 		</div>
 	</body>
