@@ -11,32 +11,7 @@
 		<h1>ITS Interface</h1>
 		<div class="dashboard-container">
 			<div class="dashboard-item brandstof">
-				<!-- <h3>Voertuig info in %</h3>
-				<canvas id="myChart1"></canvas>
-   				<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-				   <script>
-				   	var ctx = document.getElementById('myChart1').getContext('2d');
-					var chart = new Chart(ctx, {
-				    // The type of chart we want to create
-				    type: 'radar',
-
-				    // The data for our dataset
-				    data: {
-				        labels: ['Brandstof', 'Snelheid', 'Acceleratie', 'Gforce'],
-				        datasets: [{
-				            label: 'Performance',
-				            backgroundColor: 'rgb(96, 255, 37)',
-				            borderColor: 'rgb(75, 197, 29)',
-				            data: [95, 70, 30, 10]
-				        }]
-				    },
-
-				    // Configuration options go here
-				    options: {}
-				});
-				   </script> -->
-
-				   <h3>Performance in %</h3>
+				<h3>Performance in %</h3>
 				<div id="brandstof"></div>
 				 <script>
 	            google.charts.load('current', {'packages':['corechart']});
@@ -64,30 +39,6 @@
 			    };
 	    		</script>
 			</div>
-				<!-- <h3>Afstand over tijd in KM</h3>
-				<canvas id="myChart2"></canvas>
-   				<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-				   <script>
-				   	var ctx = document.getElementById('myChart2').getContext('2d');
-					var chart = new Chart(ctx, {
-				    // The type of chart we want to create
-				    type: 'line',
-
-				    // The data for our dataset
-				    data: {
-				        labels: ['06:00', '10:00', '14:00', '18:00', '22:00', '02:00'],
-				        datasets: [{
-				            label: 'Omgeving van voertuig',
-				            backgroundColor: 'rgb(253, 115, 230)',
-				            borderColor: 'rgb(182, 83, 166)',
-				            data: [0, 7000, 18000, 32000, 49000, 62000, 81000]
-				        }]
-				    },
-
-				    // Configuration options go here
-				    options: {}
-				});
-				   </script> -->
 
 			<div class="dashboard-item omgeving">
 				<h3>Afstand over tijd in KM</h3>
@@ -123,30 +74,6 @@
 
 			<div class="dashboard-item voorraden">
 				<h3>Voedsel voorraad in %</h3>
-				<!-- <h3>Voorraden in %</h3>
-				<canvas id="myChart3"></canvas>
-   				<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-				   <script>
-				   	var ctx = document.getElementById('myChart3').getContext('2d');
-					var chart = new Chart(ctx, {
-				    // The type of chart we want to create
-				    type: 'doughnut',
-
-				    // The data for our dataset
-				    data: {
-				        labels: ['Voedsel', 'Water'],
-				        datasets: [{
-				            label: 'Voorraad',
-				            backgroundColor: 'rgb(53, 209, 255)',
-				            borderColor: 'rgb(44, 144, 185)',
-				            data: [60, 30]
-				        }]
-				    },
-
-				    // Configuration options go here
-				    options: {}
-				});
-				   </script> -->
 				<div id="voorraden"></div>
 				 <script>
 	            google.charts.load('current', {'packages':['corechart']});
@@ -172,36 +99,9 @@
 			      chart.draw(data, options);
 			    };
 	    		</script>
-
 			</div>
 
 			<div class="dashboard-item tools">
-				<!-- <h3>Bemanning in %</h3>
-				<canvas id="myChart4"></canvas>
-   				<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-				   <script>
-				   	var ctx = document.getElementById('myChart4').getContext('2d');
-					var chart = new Chart(ctx, {
-				    // The type of chart we want to create
-				    type: 'pie',
-
-				    // The data for our dataset
-				    data: {
-				        labels: ['Mannen', 'Vrouwen', 'Vogels', 'Overige dieren'],
-				        datasets: [{
-				            label: 'Tools',
-				            backgroundColor: 'rgb(255, 141, 19)',
-				            borderColor: 'rgb(186, 104, 17)',
-				            data: [40, 30, 10, 20]
-				        }]
-				    },
-
-				    // Configuration options go here
-				    options: {}
-				});
-				   </script>
-			    };
-	    		</script> -->
 				<h3>Bemanning</h3>
 				<div id="tools"></div>
 				 <script>
