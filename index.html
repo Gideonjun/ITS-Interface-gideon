@@ -5,6 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>ITS Interface</title>
 		<link type="text/css" href="style.css" rel="stylesheet" />
+		<link rel="stylesheet" href="bower_components/chartist/dist/chartist.min.css">
 		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 	</head>
 	<body>
@@ -12,121 +13,110 @@
 		<div class="dashboard-container">
 			<div class="dashboard-item brandstof">
 				<h3>Performance in %</h3>
-				<div id="brandstof"></div>
-				 <script>
-	            google.charts.load('current', {'packages':['corechart']});
-			    google.charts.setOnLoadCallback(drawChart);
+				<canvas id="myChart1"></canvas>
+   				<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+				   <script>
+				   	var ctx = document.getElementById('myChart1').getContext('2d');
+					var chart = new Chart(ctx, {
+				    // The type of chart we want to create
+				    type: 'line',
 
-			    function drawChart() {
+				    // The data for our dataset
+				    data: {
+				        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+				        datasets: [{
+				            label: 'Performance',
+				            backgroundColor: 'rgb(255, 99, 132)',
+				            borderColor: 'rgb(255, 99, 132)',
+				            data: [0, 10, 5, 2, 20, 30, 45]
+				        }]
+				    },
 
-			      var data = new google.visualization.DataTable();
-			      data.addColumn('string', 'Brandstof');
-			      data.addColumn('number', 'Snelheid');
-			      data.addRows([
-			        ['Brandstof', 40],
-			        ['Snelheid', 15],
-			        ['Acceleratie', 20],
-			        ['G-force', 25]
-			      ]);
-
-			      var options = {
-			        
-			        sliceVisibilityThreshold: .4
-			      };
-
-			      var chart = new google.visualization.ColumnChart(document.getElementById('brandstof'));
-			      chart.draw(data, {colors: ['#FF6230', '#FF6230'],}, options);
-			    };
-	    		</script>
+				    // Configuration options go here
+				    options: {}
+				});
+				   </script>
 			</div>
 
 			<div class="dashboard-item omgeving">
 				<h3>Voertuig omgeving in %</h3>
-				<div id="voertuig"></div>
-				 <script>
-	            google.charts.load('current', {'packages':['corechart']});
-			    google.charts.setOnLoadCallback(drawChart);
+				<canvas id="myChart2"></canvas>
+   				<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+				   <script>
+				   	var ctx = document.getElementById('myChart2').getContext('2d');
+					var chart = new Chart(ctx, {
+				    // The type of chart we want to create
+				    type: 'pie',
 
-			    function drawChart() {
+				    // The data for our dataset
+				    data: {
+				        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+				        datasets: [{
+				            label: 'Omgeving van voertuig',
+				            backgroundColor: 'rgb(255, 99, 132)',
+				            borderColor: 'rgb(255, 99, 132)',
+				            data: [0, 10, 5, 2, 20, 30, 45]
+				        }]
+				    },
 
-			      var data = new google.visualization.DataTable();
-			      data.addColumn('string', 'Zwaartekracht');
-			      data.addColumn('number', 'Atmosfeer');
-			      data.addRows([
-			        ['Zwaartekracht', 65],
-			        ['Afstand', 15],
-			        ['Atmosfeer', 20]
-			      ]);
-
-			      var options = {
-		
-			        sliceVisibilityThreshold: .3
-			      };
-
-			      var chart = new google.visualization.ColumnChart(document.getElementById('voertuig'));
-			      chart.draw(data, {colors: ['#FF6230', '#FF6230'],}, options);
-			    };
-	    		</script>
+				    // Configuration options go here
+				    options: {}
+				});
+				   </script>
 			</div>
 
 			<div class="dashboard-item voorraden">
 				<h3>Voorraden in %</h3>
-				<div id="voorraden"></div>
-				 <script>
-	            google.charts.load('current', {'packages':['corechart']});
-			    google.charts.setOnLoadCallback(drawChart);
+				<canvas id="myChart3"></canvas>
+   				<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+				   <script>
+				   	var ctx = document.getElementById('myChart3').getContext('2d');
+					var chart = new Chart(ctx, {
+				    // The type of chart we want to create
+				    type: 'doughnut',
 
-			    function drawChart() {
+				    // The data for our dataset
+				    data: {
+				        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+				        datasets: [{
+				            label: 'Voorraad',
+				            backgroundColor: 'rgb(255, 99, 132)',
+				            borderColor: 'rgb(255, 99, 132)',
+				            data: [0, 10, 5, 2, 20, 30, 45]
+				        }]
+				    },
 
-			      var data = new google.visualization.DataTable();
-			      data.addColumn('string', 'Voedsel');
-			      data.addColumn('number', 'Water');
-			      data.addRows([
-			        ['Voedsel', 65],
-			        ['Water', 35],
-			      ]);
-
-			      var options = {
-			        
-			        sliceVisibilityThreshold: .2
-			      };
-
-			      var chart = new google.visualization.PieChart(document.getElementById('voorraden'));
-			      chart.draw(data, {colors: ['#FF6230', '#3088FF'],}, options);
-			    };
-	    		</script>
+				    // Configuration options go here
+				    options: {}
+				});
+				   </script>
 			</div>
 
 			<div class="dashboard-item tools">
 				<h3>Tools</h3>
-				<div id="tools"></div>
-				 <script>
-			      google.charts.load('current', {'packages':['corechart']});
-			      google.charts.setOnLoadCallback(drawChart);
+				<canvas id="myChart4"></canvas>
+   				<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+				   <script>
+				   	var ctx = document.getElementById('myChart4').getContext('2d');
+					var chart = new Chart(ctx, {
+				    // The type of chart we want to create
+				    type: 'bar',
 
-			      function drawChart() {
-			        var data = google.visualization.arrayToDataTable([
-			          ['Zwaartekracht', 'Afstand'],
-			          [ 8, 10],
-			          [ 4, 20],
-			          [ 3, 30],
-			          [ 2, 40],
-			          [ 1, 50],
-			          [ 0, 60]
-			        ]);
+				    // The data for our dataset
+				    data: {
+				        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+				        datasets: [{
+				            label: 'Tools',
+				            backgroundColor: 'rgb(255, 99, 132)',
+				            borderColor: 'rgb(255, 99, 132)',
+				            data: [0, 10, 5, 2, 20, 30, 45]
+				        }]
+				    },
 
-			        var options = {
-			          title: 'Mars naar aardse Afstand en Zwaartekracht',
-			          hAxis: {title: 'Zwaartekracht', minValue: 0, maxValue: 15},
-			          vAxis: {title: 'Afstand', minValue: 0, maxValue: 15},
-			          legend: 'none'
-			        };
-
-			        var chart = new google.visualization.BarChart(document.getElementById('tools'));
-
-			        chart.draw(data, options);
-			      }
-			    </script>
+				    // Configuration options go here
+				    options: {}
+				});
+				   </script>
 			</div>
 		</div>
 	</body>
