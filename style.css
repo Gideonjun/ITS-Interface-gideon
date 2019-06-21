@@ -3,7 +3,9 @@
 }
 
 body{
-	background-color: #0D3252;
+	background-image: linear-gradient(to bottom, #0000ff 0%, #9966ff 100%);
+	background-size: auto;
+	background-position: center;
 	color: #FFFFFF;
 	font-family: arial;
 }
@@ -18,7 +20,9 @@ h1, h3, h4 {
 
 
 .dashboard-container {
-	background-color: #0D3252;
+	background-image: linear-gradient(to bottom, #0000ff 0%, #9966ff 100%);
+	background-size: auto;
+	background-position: center;
 	flex-basis: 100%;
 	margin: 40px auto 0 auto;
 }

@@ -12,23 +12,23 @@
 		<h1>ITS Interface</h1>
 		<div class="dashboard-container">
 			<div class="dashboard-item brandstof">
-				<h3>Performance in %</h3>
+				<h3>Voertuig info in %</h3>
 				<canvas id="myChart1"></canvas>
    				<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 				   <script>
 				   	var ctx = document.getElementById('myChart1').getContext('2d');
 					var chart = new Chart(ctx, {
 				    // The type of chart we want to create
-				    type: 'line',
+				    type: 'bar',
 
 				    // The data for our dataset
 				    data: {
-				        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+				        labels: ['Brandstof', 'Snelheid', 'Acceleratie', 'Gforce'],
 				        datasets: [{
 				            label: 'Performance',
-				            backgroundColor: 'rgb(255, 99, 132)',
-				            borderColor: 'rgb(255, 99, 132)',
-				            data: [0, 10, 5, 2, 20, 30, 45]
+				            backgroundColor: 'rgb(96, 255, 37)',
+				            borderColor: 'rgb(75, 197, 29)',
+				            data: [95, 70, 30, 10]
 				        }]
 				    },
 
@@ -39,23 +39,23 @@
 			</div>
 
 			<div class="dashboard-item omgeving">
-				<h3>Voertuig omgeving in %</h3>
+				<h3>Afstand over tijd in KM</h3>
 				<canvas id="myChart2"></canvas>
    				<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 				   <script>
 				   	var ctx = document.getElementById('myChart2').getContext('2d');
 					var chart = new Chart(ctx, {
 				    // The type of chart we want to create
-				    type: 'pie',
+				    type: 'line',
 
 				    // The data for our dataset
 				    data: {
-				        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+				        labels: ['06:00', '10:00', '14:00', '18:00', '22:00', '02:00'],
 				        datasets: [{
 				            label: 'Omgeving van voertuig',
-				            backgroundColor: 'rgb(255, 99, 132)',
-				            borderColor: 'rgb(255, 99, 132)',
-				            data: [0, 10, 5, 2, 20, 30, 45]
+				            backgroundColor: 'rgb(253, 115, 230)',
+				            borderColor: 'rgb(182, 83, 166)',
+				            data: [0, 7000, 18000, 32000, 49000, 62000, 81000]
 				        }]
 				    },
 
@@ -77,12 +77,12 @@
 
 				    // The data for our dataset
 				    data: {
-				        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+				        labels: ['Voedsel', 'Water'],
 				        datasets: [{
 				            label: 'Voorraad',
-				            backgroundColor: 'rgb(255, 99, 132)',
-				            borderColor: 'rgb(255, 99, 132)',
-				            data: [0, 10, 5, 2, 20, 30, 45]
+				            backgroundColor: 'rgb(53, 209, 255)',
+				            borderColor: 'rgb(44, 144, 185)',
+				            data: [60, 30]
 				        }]
 				    },
 
@@ -93,23 +93,23 @@
 			</div>
 
 			<div class="dashboard-item tools">
-				<h3>Tools</h3>
+				<h3>Bemanning in %</h3>
 				<canvas id="myChart4"></canvas>
    				<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 				   <script>
 				   	var ctx = document.getElementById('myChart4').getContext('2d');
 					var chart = new Chart(ctx, {
 				    // The type of chart we want to create
-				    type: 'bar',
+				    type: 'pie',
 
 				    // The data for our dataset
 				    data: {
-				        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+				        labels: ['Mannen', 'Vrouwen', 'Vogels', 'Overige dieren'],
 				        datasets: [{
 				            label: 'Tools',
-				            backgroundColor: 'rgb(255, 99, 132)',
-				            borderColor: 'rgb(255, 99, 132)',
-				            data: [0, 10, 5, 2, 20, 30, 45]
+				            backgroundColor: 'rgb(255, 141, 19)',
+				            borderColor: 'rgb(186, 104, 17)',
+				            data: [40, 30, 10, 20]
 				        }]
 				    },
 
