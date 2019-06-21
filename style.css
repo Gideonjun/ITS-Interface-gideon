@@ -82,7 +82,7 @@ img {
 /*Tablet*/
 @media only screen and (min-width: 601px) and (max-width: 904px) {
 	.dashboard-item {
-		width: 49.5%;
+		width: 49.7%;
 		margin-bottom: 5px;
 	}
 	.brandstof1, .omgeving1, .tools1, .voorraden1 {
@@ -123,7 +123,7 @@ img {
 /*Full desktop*/
 @media only screen and (min-width: 1175px) {
 	.dashboard-item {
-		width: 24.5%;
+		width: 24.7%;
 		margin-bottom: 5px;
 	}
 
