@@ -20,13 +20,13 @@
 			    function drawChart() {
 
 			      var data = new google.visualization.DataTable();
-			      data.addColumn('string', 'Brandstof');
-			      data.addColumn('number', 'Snelheid');
+			      data.addColumn('string', 'Performance');
+			      data.addColumn('number', 'Aantal procent');
 			      data.addRows([
-			        ['Brandstof', 40],
-			        ['Snelheid', 15],
-			        ['Acceleratie', 20],
-			        ['G-force', 25]
+			        ['Brandstof', 95],
+			        ['Snelheid', 70],
+			        ['Acceleratie', 30],
+			        ['G-force', 10]
 			      ]);
 
 			      var options = {
@@ -50,8 +50,8 @@
 			    function drawChart() {
 
 			      var data = new google.visualization.DataTable();
-			      data.addColumn('string', 'Zwaartekracht');
-			      data.addColumn('number', 'Atmosfeer');
+			      data.addColumn('string', 'Tijd');
+			      data.addColumn('number', 'Aantal KM');
 			      data.addRows([
 			        ['06:00', 0],
 			        ['10:00', 7000],
@@ -73,7 +73,7 @@
 			</div>
 
 			<div class="dashboard-item voorraden">
-				<h3>Voedsel voorraad in %</h3>
+				<h3>Voorraad in %</h3>
 				<div id="voorraden"></div>
 				 <script>
 	            google.charts.load('current', {'packages':['corechart']});
@@ -110,8 +110,8 @@
 
 			      function drawChart() {
 				      var data = new google.visualization.DataTable();
-				      data.addColumn('string', 'Voedsel');
-				      data.addColumn('number', 'Water');
+				      data.addColumn('string', 'Bemanning');
+				      data.addColumn('number', 'Aantal');
 				      data.addRows([
 				        ['Mannen', 40],
 				        ['Vrouwen', 30],
