@@ -67,6 +67,7 @@
 
 			<div class="dashboard-item voorraden">
 				<h3>Voorraden in %</h3>
+<<<<<<< HEAD
 				<canvas id="myChart3"></canvas>
    				<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 				   <script>
@@ -90,6 +91,32 @@
 				    options: {}
 				});
 				   </script>
+=======
+				<div id="voorraden"></div>
+				 <script>
+	            google.charts.load('current', {'packages':['corechart']});
+			    google.charts.setOnLoadCallback(drawChart);
+
+			    function drawChart() {
+
+			      var data = new google.visualization.DataTable();
+			      data.addColumn('string', 'Voedsel');
+			      data.addColumn('number', 'Water');
+			      data.addRows([
+			        ['Voedsel', 65],
+			        ['Water', 35],
+			      ]);
+
+			      var options = {
+			        
+			        sliceVisibilityThreshold: .2
+			      };
+
+			      var chart = new google.visualization.ColumnChart(document.getElementById('voorraden'));
+			      chart.draw(data, {colors: ['#FF6230', '#3088FF'],}, options);
+			    };
+	    		</script>
+>>>>>>> parent of f2dcf8a... chart first change
 			</div>
 
 			<div class="dashboard-item tools">
