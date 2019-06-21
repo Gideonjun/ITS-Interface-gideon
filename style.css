@@ -102,7 +102,7 @@ img {
 /*Klein desktop*/
 @media only screen and (min-width: 905px) and (max-width: 1174px){
 	.dashboard-item {
-		width: 33.2%;
+		width: 32.7%;
 		margin-bottom: 5px;
 	}
 	.brandstof1, .omgeving1, .tools1, .voorraden1 {
@@ -123,8 +123,7 @@ img {
 /*Full desktop*/
 @media only screen and (min-width: 1175px) {
 	.dashboard-item {
-		width: 49.7%;
-		margin-bottom: 5px;
+		width: 24.5%;
 	}
 
 	.dashboard-container {
